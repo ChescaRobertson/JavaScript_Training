@@ -7,7 +7,7 @@ salaryPerMonth = 2510.9;
 
 let tim = `Name: ${employeeName} 
 Started with the company: ${startYear} 
-Salary: £${salaryPerMonth} 
+Salary: £${salaryPerMonth.toFixed(2)} 
 Permanent Status: ${permanent}`;
 
 console.log(tim);
