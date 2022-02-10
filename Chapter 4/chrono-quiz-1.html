@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise 4b</title>
+    <script>
+      const questYearTitanicSink = 'What year did the Titanic Sink?';
+      const questYearWW1Began = 'What year did the WW1 begin?';
+      const questYearQoWPassed =
+        'What year was the Qualification of Women Act passed?';
+
+      const ansYearTitanicSink = 1912;
+      const ansYearWW1Began = 1914;
+      const ansYearQoWPassed = 1918;
+
+      let useranswer;
+
+      function askQuestion(question) {
+        userranswer = prompt(question);
+        return useranswer;
+      }
+
+      function checkAnswer(useranswer, correctans) {
+        if (useranswer == correctans) {
+          alert('Right!');
+        } else {
+          alert(`Wrong it was ${correctans}`);
+        }
+      }
+
+      for (let i = 1; i <= 3; i++) {
+        switch (i) {
+          case 1:
+            useranswer = askQuestion(questYearTitanicSink);
+            checkAnswer(useranswer, ansYearTitanicSink);
+            break;
+          case 2:
+            useranswer = askQuestion(questYearWW1Began);
+            checkAnswer(useranswer, ansYearWW1Began);
+            break;
+          case 3:
+            useranswer = askQuestion(questYearQoWPassed);
+            checkAnswer(useranswer, ansYearQoWPassed);
+            break;
+        }
+      }
+    </script>
+  </head>
+  <body></body>
+</html>
