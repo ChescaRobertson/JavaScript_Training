@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise 6</title>
+  </head>
+  <body>
+    <script>
+      function Account(name, number, balance) {
+        this.name = name;
+        this.number = number;
+        this.balance = balance;
+      }
+
+      Account.prototype.deposit = function (amount) {
+        return (this.balance += amount);
+      };
+
+      Account.prototype.withdraw = function (amount) {
+        return (this.balance -= amount);
+      };
+
+      let a1 = new Account('Bob', 12345678, 1000.0);
+      let a2 = new Account('Fred', 98765432, 50.0);
+
+      a1.deposit(100);
+      a2.deposit(100);
+
+      Account.prototype.display = function () {
+        alert(
+          `Name: ${this.name}   Number: ${this.number}  Balance: ${this.balance}`
+        );
+      };
+
+      a1.display();
+      a2.display();
+    </script>
+  </body>
+</html>
